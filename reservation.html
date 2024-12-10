@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Les Ateliers ZYNGER</title>
+    <!--fonts-->
+    <script
+      src="https://kit.fontawesome.com/d706b47c33.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <ul>
+          <li class="first"><a href="index.html#main">Les Salons Z</a></li>
+          <li class="main"><a href="index.html#main">ACCEUIL</a></li>
+          <li class="main"><a href="index.html#services">SAVOIR-FAIRE</a></li>
+          <li class="main"><a href="index.html#about">NOS ATELIERS</a></li>
+          <li class="main"><a href="index.html#stylists">NOS SALONS</a></li>
+          <li class="main"><a href="index.html#offers">OFFERS</a></li>
+          <li class="main"><a href="index.html#lookbook">GALERIE</a></li>
+          <li class="last">
+            <a href="index.html#contact">- NOUS CONTACTER</a>
+          </li>
+          <li
+            id="pg-content"
+            class="menu"
+            style="cursor: pointer"
+            onclick="toggleSM()"
+          >
+            &#9776;
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="mySidemenu" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
+      <div class="sm-wrapper">
+        <a href="index.html#main" onclick="closeSM()">ACCEUIL</a>
+        <a href="index.html#services" onclick="closeSM()">METIER</a>
+        <a href="index.html#about" onclick="closeSM()">ATELIERS</a>
+        <a href="index.html#stylists" onclick="closeSM()">SALONS</a>
+        <a href="index.html#offers" onclick="closeSM()">OFFERS</a>
+        <a href="index.html#lookbook" onclick="closeSM()">GALERIE</a>
+        <a href="index.html#contact" onclick="closeSM()">CONTACT</a>
+      </div>
+    </div>
+    <main>
+      <h1>Prendre Rendez-vous</h1>
+      <p>Nous serions ravis de répondre à vos questions et demandes.</p>
+
+      <!-- Formulaire de Contact -->
+      <section class="reservation-form">
+        <h2>Formulaire de Réservation</h2>
+        <p>
+          Remplissez les informations ci-dessous pour réserver votre
+          rendez-vous.
+        </p>
+        <form action="submit-reservation.php" method="POST">
+          <label for="name">Nom:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Votre nom"
+            required
+          />
+          <label for="">Prénom:</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Votre prénom"
+            required
+          />
+
+          <label for="email">Adresse Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Votre email"
+            required
+          />
+
+          <label for="phone">Numéro de Téléphone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Votre numéro de téléphone"
+            required
+          />
+
+          <label for="salon">Choisir un Salon:</label>
+          <select id="salon" name="salon" required>
+            <option value="oberkampf">Oberkampf - Paris 11</option>
+            <option value="foch">Foch - Paris 8</option>
+            <option value="palais-royal">Palais Royal - Paris 1</option>
+          </select>
+
+          <label for="coiffeur">Choisir un Coiffeur:</label>
+          <select id="coiffeur" name="coiffeur" required>
+            <option value="">Sélectionnez un coiffeur</option>
+          </select>
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Heure:</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="service">Service:</label>
+          <textarea
+            id="service"
+            name="service"
+            placeholder="Description de votre demande"
+          ></textarea>
+
+          <button type="submit">Réserver</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <ul>
+        <li>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+      </ul>
+      <h6>
+        <a href="https://jessefrenchdev.com" target="_blank">© Jesse French</a>
+      </h6>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

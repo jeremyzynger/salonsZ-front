@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Les Ateliers ZYNGER</title>
+    <!--fonts-->
+    <script
+      src="https://kit.fontawesome.com/d706b47c33.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <ul>
+          <li class="first"><a href="index.html">Les Salons Z</a></li>
+          <li class="main"><a href="#main">ACCEUIL</a></li>
+          <li class="main"><a href="#services">SAVOIR-FAIRE</a></li>
+          <li class="main"><a href="#about">NOS ATELIERS</a></li>
+          <li class="main"><a href="#stylists">NOS SALONS</a></li>
+          <li class="main"><a href="#offers">OFFERS</a></li>
+          <li class="main"><a href="#lookbook">GALERIE</a></li>
+          <li class="last"><a href="#contact">- NOUS CONTACTER</a></li>
+          <li
+            id="pg-content"
+            class="menu"
+            style="cursor: pointer"
+            onclick="toggleSM()"
+          >
+            &#9776;
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="mySidemenu" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
+      <div class="sm-wrapper">
+        <a href="#main" onclick="closeSM()">ACCEUIL</a>
+        <a href="#services" onclick="closeSM()">METIER</a>
+        <a href="#about" onclick="closeSM()">ATELIERS</a>
+        <a href="#stylists" onclick="closeSM()">SALONS</a>
+        <a href="#offers" onclick="closeSM()">OFFERS</a>
+        <a href="#lookbook" onclick="closeSM()">GALERIE</a>
+        <a href="#contact" onclick="closeSM()">CONTACT</a>
+      </div>
+    </div>
+    <main id="main">
+      <h1>Votre Nouveau Style</h1>
+      <p>Adoptez un nouveau style, tout en confiance</p>
+      <a href="#services">SAVOIR-FAIRE</a>
+      <a href="reservation.html">JE PREND RENDEZ-VOUS</a>
+    </main>
+    <section class="quality" id="services">
+      <section class="one">
+        <img src="Assets/quality-icon-01.png" />
+        <h3>EXPERT BEAUTICIANS</h3>
+        <p>
+          Our beauticians are passion driven and have all completed rigorous
+          cosmetology programs to make sure that they have the skills to make
+          you look and feel your best.
+        </p>
+      </section>
+      <section class="two">
+        <img src="Assets/quality-icon-02.png" />
+        <h3>QUALITY SERVICES</h3>
+        <p>
+          We offer a wide variety of services including haircuts, styling,
+          coloring and color correction, treatments and processes, and makeup.
+          Come see us to help you achieve your new look.
+        </p>
+      </section>
+      <section class="three">
+        <img src="Assets/quality-icon-03.png" />
+        <h3>BEAUTY PRODUCTS</h3>
+        <p>
+          We utilize the highest salon quality products in all of our styles and
+          treatments. Love something we used? We keep plenty of items in stock
+          that are available for purchase.
+        </p>
+      </section>
+    </section>
+    <section class="video" id="about">
+      <section class="both">
+        <section class="left">
+          <h2>BRING YOUR VISION TO LIFE</h2>
+          <p>
+            We celebrate women in their real, most raw, authentic brilliance,
+            who believe in themselves, and are ready to step into a look they
+            love. We employ hair products with some of the most natural and rich
+            ingredients because we believe you should never expect any less.
+          </p>
+          <a href="#lookbook">- GALERIE</a>
+        </section>
+        <section class="right">
+          <video
+            controls
+            preload="auto"
+            poster="Assets/poster.png"
+            src="Assets/pexels-rodnae-productions-7754434.mp4"
+          ></video>
+        </section>
+      </section>
+    </section>
+    <section class="stylers" id="stylists">
+      <h2>NOS SALONS</h2>
+      <h4>_</h4>
+      <section class="profiles">
+        <section class="individuals">
+          <img src="Assets/salon1.jpg" />
+          <div class="title">
+            <h3>OBERKAMPF</h3>
+            <span>Paris 11</span>
+          </div>
+        </section>
+        <section class="individuals">
+          <img src="Assets/salon2.jpg" />
+          <div class="title">
+            <h3>FOCH</h3>
+            <span>Paris 8</span>
+          </div>
+        </section>
+        <section class="individuals">
+          <img src="Assets/salon3.jpg" />
+          <div class="title">
+            <h3>PALAIS ROYAL</h3>
+            <span>Paris 1</span>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="offer" id="offers">
+      <h4>COLOR DAY OFFER!</h4>
+      <h3>10% OFF ON HAIRCUT, COLOR, AND HIGHLIGHT</h3>
+      <span><a href="mailto:">- BOOK APPOINTMENT</a></span>
+    </section>
+    <section class="lookbook" id="lookbook">
+      <h2>OUR LOOKBOOK</h2>
+      <h4>_</h4>
+      <section class="grid">
+        <img class="two" src="Assets/averie-woodard-4nulm-JUYFo-unsplash.jpg" />
+        <img
+          class="two"
+          src="Assets/raphael-lovaski-acJTuAzH9RQ-unsplash.jpg"
+        />
+        <img class="three" src="Assets/kareya-saleh-tLKOj6cNwe0-unsplash.jpg" />
+        <img
+          class="three"
+          src="Assets/jessie-dee-dabrowski-www-jessiedee-net-TETR8YLSqt4-unsplash.jpg"
+        />
+        <img
+          class="three"
+          src="Assets/gustavo-spindula-K2D7muBun1A-unsplash.jpg"
+        />
+        <img class="two" src="Assets/maxim-potkin-K7mpa6NVWDk-unsplash.jpg" />
+        <img class="two" src="Assets/omid-armin-jvjZuJ9Inc8-unsplash.jpg" />
+      </section>
+    </section>
+    <footer id="contact">
+      <ul>
+        <li>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+      </ul>
+      <h6>
+        <a href="https://jessefrenchdev.com" target="_blank">© Jesse French</a>
+      </h6>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

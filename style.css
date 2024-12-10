@@ -1,0 +1,651 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-size: 62.5%;
+  font-family: 'Gideon Roman', cursive;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+
+/***************** HEADER ******************/
+header {
+  position: fixed; /* Permet au header de rester en haut */
+  top: 0;           /* Positionner le header en haut */
+  width: 100%;
+  height: 75px;
+  background-color: white;  /* Ajoutez une couleur de fond pour la visibilité */
+  font-size: 1.5rem;
+  z-index: 1000;   /* Assurez-vous qu'il soit au-dessus des autres éléments */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombre sous le header */
+}
+nav{
+  text-align: center;
+}
+li{
+  margin: 25px 25px 0 0;
+  display: inline-block;
+}
+li.menu{
+  display: none;
+}
+li.first{
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 3rem;
+  width: 25%;
+  text-align: start;
+}
+li.last{
+  width: 25%;
+  text-align: end;
+}
+/***************** HEADER ******************/
+
+/*SIDEBAR***********************************/
+.sm-wrapper{
+  margin-top: 10px;
+}
+.sidemenu{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidemenu a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 35px;
+  color: black;
+  display: block;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.sidemenu .close{
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 45px;
+}
+/*SIDEBAR***********************************/
+
+/*SIDEBAR HOVER******************************/
+.sm-wrapper a:after{
+  z-index: -1;
+  position: absolute;
+  left: 0%;
+  width: 0;
+  height: 50px;
+  background: #d5adb5;
+  content: '';
+  transition: width 0.35s ease-in-out;
+}
+.sm-wrapper a:hover:after{
+  width: 10%;
+}
+.sm-wrapper a:hover{
+  padding-left: 64px;
+  transition: 0.35s ease-in-out;
+}
+/*SIDEBAR HOVER******************************/
+
+/*SIDEBAR CONTENT****************************/
+#pg-content{
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+/*SIDEBAR CONTENT****************************/
+
+/****************** MAIN *******************/
+main{
+  height: 60vh;
+  width: 100%;
+  background-image: url("Assets/george-bohunicky-qJKT2rMU0VU-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 50px;
+}
+h1{
+  font-size: 7rem;
+  color: black;
+  margin: 0 0 20px 5%;
+  padding-top: 150px;
+  width: 40%;
+}
+main p{
+  margin: 0 0 100px 5%;
+  font-size: 1.5rem;
+  color: black;
+}
+main a{
+  border: 1px solid black;
+  padding: 20px 20px;
+  background: black;
+  color: white;
+  margin: 0 0 40px 5%;
+  font-size: 1.5rem;
+  border-radius: 25% 10%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/****************** MAIN *******************/
+
+/***************** SECTION GLOBAL *****************/
+section{
+  margin-top: 75px;
+}
+/***************** SECTION GLOBAL *****************/
+
+/***************** SECTION *****************/
+section.quality{
+  height: 400px;
+  width: 100%;
+  padding-top: 40px;
+  margin: auto;
+  text-align: center;
+}
+section.one, section.two, section.three{
+  width: 33.3333%;
+  float: left;
+}
+section.quality h3{
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 25px 0 25px 0;
+}
+section.quality p{
+  width: 75%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+}
+/***************** SECTION *****************/
+
+/***************** SECTION *****************/
+section.video{
+  height: 500px;
+  background: #f3f4f6;
+}
+section.left{
+  height: 450px;
+  width: 60%;
+  float: left;
+}
+section.right{
+  height: 450px;
+  width: 40%;
+  float: left;
+  position: relative;
+}
+section.video h2{
+  padding: 10% 0 50px 0;
+  width: 90%;
+  font-size: 5rem;
+  margin: auto;
+}
+section.video p{
+  padding-bottom: 50px;
+  font-size: 2rem;
+  width: 90%;
+  margin: auto;
+}
+section.left a{
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  margin-left: 5%;
+}
+section.video video{
+  margin-top: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  width: 90%;
+}
+/***************** SECTION *****************/
+
+/***************** SECTION *****************/
+section.stylers{
+  height: auto;
+  width: 100%;
+  float: left;
+  object-fit: cover;
+}
+section.stylers h2{
+  font-size: 3.5rem;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+section.stylers h4{
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+section.profiles{
+  text-align: center;
+  display: flex;
+}
+section.stylers img{
+  height: 70%;
+  width: 75%;
+}
+section.individuals{
+  width: 33.3333%;
+  float: left;
+}
+div.title{
+  height: 50px;
+  width: 50%;
+  background: black;
+  margin: auto;
+}
+div.title h3, div.title span{
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  font-weight: bold;
+}
+div.title span{
+  font-size: 1rem;
+}
+/***************** SECTION *****************/
+
+/***************** SECTION *****************/
+section.offer{
+  height: auto;
+  width: 100%;
+  margin-top: 5vw;
+  float: left;
+  background-image: url("Assets/pink.png");
+  background-size: 92%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+section.offer h4{
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 50px 6%;
+  padding-top: 10vw;
+}
+section.offer h3{
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 50px 6%;
+  width: 48%;
+}
+section.offer a{
+  padding: 10px 30px;
+  color: white;
+  background: black;
+}
+section.offer span{
+  display: inline-block;
+  margin: 0 0 10vw 6%;
+}
+/***************** SECTION *****************/
+
+/***************** SECTION *****************/
+section.lookbook{
+  width: 100%;
+  margin-top: 20px;
+  float: left;
+}
+section.lookbook h2{
+  font-size: 3.5rem;
+  margin-top: 50px;
+  text-align: center;
+}
+section.lookbook h4{
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+section.grid{
+  width: 85%;
+  text-align: center;
+  margin: auto;
+}
+section.grid img.three{
+  height: 600px;
+  width: 390px;
+  margin: 1%;
+}
+section.grid img.two{
+  height: 350px;
+  width: 600px;
+  margin: 1%;
+}
+/***************** SECTION *****************/
+
+/***************** FOOTER ******************/
+footer{
+  float: left;
+  height: auto;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+  background: #f3f4f6;
+}
+footer li{
+  margin-top: 30px;
+  font-size: 28px;
+}
+footer h6{
+  font-size: 16px;
+  margin: 15px 0 15px 0;
+}
+/***************** FOOTER ******************/
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+/*****************DESKTOP*******************/
+@media screen and (max-width: 1491px){
+  section.grid{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1401px){
+  li.first, li.last{
+    width: 15%;
+  }
+}
+@media screen and (max-width: 1282px){
+  section.video h2{
+    margin-top: 15px;
+  }
+}
+/*****************DESKTOP*******************/
+
+/******************TABLET*******************/
+@media screen and (max-width: 1005px){
+  li.first, li.last{
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 975px){
+  section.video{
+    height: 1000px;
+  }
+  section.left, section.right{
+    width: 100%;
+  }
+  section.video video{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 961px){
+  li.main, li.last{
+    display: none;
+  }
+  li.first{
+    width: 90%;
+  }
+  li.menu{
+    display: contents;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 926px){
+  div.title{
+    width: 60%;
+    height: 45px;
+  }
+  div.title h3{
+    font-size: 130%;
+  }
+}
+@media screen and (max-width: 847px){
+  section.quality{
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 746px){
+  section.offer{
+    background-image: none;
+    background-color: #d5adb5;
+  }
+  section.offer h3{
+    width: 92%;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 673px){
+  div.title h3{
+    font-size: 100%;
+  }
+  li.first{
+    width: 75%;
+  }
+}
+/******************TABLET*******************/
+
+/******************MOBILE*******************/
+@media screen and (max-width: 628px){
+  main{
+    background-position: left;
+    height: 100vh;
+  }
+  h1{
+    width: 60%;
+    margin-left: 4%;
+    margin-bottom: 25px;
+    padding-top: 75px;
+    font-size: 6rem;
+  }
+  main p{
+    width: 65%;
+    margin-left: 4%;
+    margin-bottom: 30px;
+  }
+  main a{
+    display: block;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    margin-left: 4%;
+    width: 165px;
+  }
+  section.left{
+    text-align: center;
+  }
+  section.video{
+    height: 900px;
+  }
+  section.offer{
+    text-align: center;
+  }
+  section.offer h4, section.offer span{
+    margin-left: 0; 
+  }
+  section.offer h3{
+    margin-left: 4%;
+  }
+  section.grid img.two{
+    width: 95%;
+    height: auto;
+  }
+} 
+@media screen and (max-width: 575px){
+  section.one, section.two, section.three{
+    width: 100%;
+  }
+  section.quality{
+    height: 850px;
+  }
+  section.quality p{
+    margin-bottom: 25px;
+  }
+  section.individuals{
+    width: 100%;
+  }
+  div.title{
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  div.title h3{
+    font-size: 130%;
+  }
+}
+@media screen and (max-width: 412px){
+  section.grid img.three{
+    width: 95%;
+    height: auto;
+  }
+  h1{
+    padding-top: 75px;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 340px){
+  section.quality{
+    height: 950px;
+  }
+}
+/******************MOBILE*******************/
+
+ /* Section Formulaire */
+ .reservation-form {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; /* Centre la section */
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reservation-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de s'ajuster sur plusieurs lignes */
+  gap: 15px; /* Espacement entre les champs */
+  justify-content: center;
+}
+
+.reservation-form label {
+  flex: 1 1 100%; /* Les labels prennent toute la largeur */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  flex: 1 1 calc(50% - 20px); /* Les champs occupent 50% de la largeur */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.reservation-form textarea {
+  flex: 1 1 100%; /* Textarea prend toute la largeur */
+  height: 100px;
+}
+
+/* Formulaire */
+.reservation-form select {
+  background-color: white; /* Mettre le fond de la sélection en blanc */
+  border: 1px solid #ddd; /* Bordure grise légère */
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.reservation-form button {
+  background: #d1a982;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reservation-form button:hover {
+  background: #b68b6c;
+}
+
+.time-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.time-button {
+  background-color: #d1a982;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.time-button:hover {
+  background-color: #b68b6c;
+}
+
+.time-button.selected {
+  background-color: #b68b6c;
+}
